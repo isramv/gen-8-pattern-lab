@@ -23,35 +23,36 @@ Composer install will ask you a bunch of questions, here's how you respond:
 ```bash
 the path ./source/_twig-components/filters already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r >
 ```
-M
+
+`M`
 
 ```bash
 the path ./source/_twig-components/functions already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r >
 ```
 
-M
+`M`
 
 ```bash
 the path ./source/_twig-components/tags already exists. merge or replace with the contents of pattern-lab/drupal-twig-components package? M/r >
 ```
 
-M
+`M`
 
 ```bash
 update the config option ishMinimum (320) with the value 240? Y/n >
 ```
 
-n
+`n`
 
 ```bash
 update the config option ishControlsHide with the value from the package install? Y/n >
 ```
 
-n
+`n`
 
 ```bashupdate the config option styleguideKitPath (/...pl/vendor/pattern-lab/styleguidekit-twig-default) with the value vendor/pattern-lab/styleguidekit-twig-default? Y/n >```
 
-n
+`n`
 
 
 ### NPM Install
