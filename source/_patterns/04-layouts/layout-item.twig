@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Wraps the items (columns) via layout.twig template.
+ */
+ #}
+{% set tag = tag|default('div') %}
+{%- if contents -%}
+  <{{ tag }} class="layout__item">
+    {%- if contents is iterable -%}
+      {%- for item in contents %}
+        {{- item }}
+      {% endfor %}
+    {%- else -%}
+      {{- contents }}
+    {%- endif -%}
+  </{{ tag }}>
+{%- endif -%}

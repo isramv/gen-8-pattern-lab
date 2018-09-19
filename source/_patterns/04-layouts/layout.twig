@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * The template generates layout markup. It is used for the `row` paragraph
+ * along with all layouts defined in this component directory.
+ */
+ #}
+{% set tag = tag|default('div') %}
+{% set style = style|default('default') %}
+{% set layout = layout|default('default') %}
+{% set format = format|default('default') %}
+{% set layout_padding = layout_padding|default('default') %}
+{% set classes = [
+  'layout__wrapper',
+  style ? 'style--' ~ style,
+]|merge(classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  {{ header }}
+  {% if heading is not empty %}
+    <div class="layout__heading">{{ heading }}</div>
+  {% endif %}
+  {% if content or items %}
+<{{ tag }} class="layout__container" data-layout="layout__{{ layout }}" data-layout-padding="layout-padding__{{ layout_padding }}" data-items="{{ items_count }}">
+      {% if items is iterable %}
+        {% for item in items %}
+          {% include '@layouts/layout-item.twig' with { contents: item } only %}
+        {% endfor %}
+      {% elseif items %}
+        {{ items }}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </{{ tag }}>
+  {% endif %}
+</div>
+

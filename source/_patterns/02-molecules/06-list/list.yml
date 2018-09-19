@@ -1,0 +1,12 @@
+title:
+  text: 'List heading'
+  level: 2
+links:
+- title: 'Related Link One With A Descriptive Title'
+  url: "#"
+- title: 'Related Link Title Two That Wraps To Two Lines'
+  url: "#"
+- title: 'Related Link Title Three'
+  url: "#"
+- title: 'Related Link Title Four Is Longer Than Title Three'
+  url: "#"

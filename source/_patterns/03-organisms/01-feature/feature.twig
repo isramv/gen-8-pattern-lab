@@ -1,0 +1,43 @@
+{% set background_style = image.src ? "background-image: url('" ~ image.src ~ "')" : '' %}
+{% set style = style|default('default') %}
+{% set classes = [
+  'feature',
+  alignment ? 'feature--' ~ alignment : '',
+  'style--' ~ style|replace({ '_': '-' })
+]|merge(classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}" style="{{ background_style }}">
+  <div class="feature__container">
+    <div class="feature__content">
+      {% if title %}
+        {% include '@atoms/02-headings/heading.twig' with {
+          'classes': ['feature__title'],
+          'heading': title,
+          'level': 2,
+          'style': 'lg',
+          'url': false
+        } only %}
+      {% endif %}
+
+      {% if text %}
+        <div class="feature__text"> {{ text }} </div>
+      {% endif %}
+
+      {% if buttons %}
+        <div class="feature__buttons">
+          {% if buttons['#theme'] %}
+            {{ buttons }}
+          {% else %}
+            {% for button in buttons %}
+              {% include '@atoms/00-button/button.twig' with {
+                'url': button.url,
+                'text': button.text,
+                'icon': button.icon|default(false)
+              } only %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

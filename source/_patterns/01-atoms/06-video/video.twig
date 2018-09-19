@@ -1,0 +1,13 @@
+{% set rid = 'video-' ~ random() %}
+<div id="{{ rid }}" class="video"></div>
+
+<script>
+  var player;
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('{{ rid }}', {
+      height: '{{ height }}',
+      width: '{{ width }}',
+      videoId: '{{ id }}'
+    });
+  }
+</script>

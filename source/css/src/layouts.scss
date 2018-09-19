@@ -1,0 +1,23 @@
+// Base
+//------------------------------------------------------------------------------
+
+@import 'base';
+@import '../../_patterns/04-layouts/base';
+
+// 2-column
+@import '../../_patterns/04-layouts/00-two/two';
+@import '../../_patterns/04-layouts/00-two/two-fixed';
+@import '../../_patterns/04-layouts/00-two/two-25-75';
+@import '../../_patterns/04-layouts/00-two/two-75-25';
+@import '../../_patterns/04-layouts/00-two/two-60-40';
+@import '../../_patterns/04-layouts/00-two/two-40-60';
+
+// 3-column
+@import '../../_patterns/04-layouts/01-three/three';
+@import '../../_patterns/04-layouts/01-three/three-two';
+
+// 4-column
+@import '../../_patterns/04-layouts/02-four/four';
+
+// Auto
+@import '../../_patterns/04-layouts/03-auto/auto';

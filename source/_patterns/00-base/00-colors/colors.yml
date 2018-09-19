@@ -1,0 +1,83 @@
+items:
+  - name: $colors.white
+    value: '#fff'
+  - name: $colors.black
+    value: '#000'
+  - name: $colors.dark-gray
+    value: '#313131'
+  - name: $colors.black-two
+    value: '#333'
+  - name: $colors.medium-gray
+    value: '#666'
+  - name: $colors.waterloo
+    value: '#838595'
+  - name: $colors.oslo-gray
+    value: '#878a8f'
+  - name: $colors.greyish
+    value: '#aca39a'
+  - name: $colors.border-gray
+    value: '#d9d9d9'
+  - name: $colors.article-gray
+    value: '#f3f3f3'
+  - name: $colors.ebb
+    value: '#f4f2f1'
+  - name: $colors.light-gray
+    value: '#f5f5f5'
+  - name: $colors.secondary-red-2
+    value: '#b52800'
+  - name: $colors.milano-red
+    value: '#c00f02'
+  - name: $colors.secondary-red
+    value: '#ce0037'
+  - name: $colors.secondary-red-3
+    value: '#d81e05'
+  - name: $colors.red
+    value: '#da291c'
+  - name: $colors.pomegranate
+    value: '#ef382a'
+  - name: $colors.orange
+    value: '#ff6900'
+  - name: $colors.secondary-orange
+    value: '#ffa300'
+  - name: $colors.yellow
+    value: '#fcf301'
+  - name: $colors.japanese-laurel
+    value: '#0a8b13'
+  - name: $colors.apple
+    value: '#41ad48'
+  - name: $colors.olive
+    value: '#7a9a01'
+  - name: $colors.green
+    value: '#97d700'
+  - name: $colors.lime
+    value: '#b5bd00'
+  - name: $colors.dark-blue
+    value: '#003c6e'
+  - name: $colors.blue
+    value: '#004b87'
+  - name: $colors.curious-blue
+    value: '#2e94c6'
+  - name: $colors.sky-blue
+    value: '#0095c8'
+  - name: $colors.turquoise
+    value: '#00a9ce'
+  - name: $colors.link-blue
+    value: '#428bca'
+  - name: $colors.shakespeare
+    value: '#58a9d1'
+  - name: $colors.baby-blue
+    value: '#d5eaf6'
+  - name: $colors.indigo
+    value: '#409'
+  - name: $colors.magenta
+    value: '#c6007e'
+  - name: $colors.eggplant
+    value: '#aa0061'
+  - name: $color-background
+    value: '#fff'
+  - name: $color-foreground
+    value: '#333'
+meta:
+  description: >-
+    To add to these items, edit the file at
+    <code>_patterns/00-base/00-colors/_variables.scss</code>

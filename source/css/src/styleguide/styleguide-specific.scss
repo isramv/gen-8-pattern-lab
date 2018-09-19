@@ -1,0 +1,25 @@
+/**
+ * This stylesheet is for styles you want to include only when the interface is
+ * being viewed within Pattern Lab. This is helpful for displaying demo styles
+ * for grids, animations, color swatches, etc. It's also helpful for overriding
+ * context-specific styles like fixed or absolutely positioned elements. These
+ * styles will not be your production CSS.
+ */
+
+@import 'color-swatches';
+
+.sg-subtype h2 {
+  color: #000;
+  a {
+    color: currentColor;
+    text-decoration: none;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+// Custom pattern state, indicating docuentation-only.
+.sg-pattern-state.documentation::before {
+  color: rebeccapurple;
+}

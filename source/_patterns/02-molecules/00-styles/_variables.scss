@@ -1,0 +1,50 @@
+$styles: (
+  default: (
+    background: 'transparent',
+    color: 'foreground'
+  ),
+  black: (
+    background:'black',
+    color: 'white'
+  ),
+  blue: (
+    background: 'blue',
+    color: 'white'
+  ),
+  blueLight: (
+    background: 'skyblue',
+    color: 'white'
+  ),
+  gray: (
+    background: 'mediumgray',
+    color: 'white'
+  ),
+  grayLight: (
+    background: 'lightgray',
+    color: 'black'
+  ),
+  green: (
+    background: 'green',
+    color: 'white'
+  ),
+  orange: (
+    background: 'orange',
+    color: 'white'
+  ),
+  purple: (
+    background: 'indigo',
+    color: 'white'
+  ),
+  red: (
+    background: 'red',
+    color: 'white'
+  ),
+  yellow: (
+    background: 'yellow',
+    color: 'black'
+  ),
+  white: (
+    background: 'white',
+    color: 'foreground'
+  )
+);

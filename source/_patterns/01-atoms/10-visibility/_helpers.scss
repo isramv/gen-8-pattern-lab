@@ -1,0 +1,29 @@
+.hide-xs {
+  @include mq($until: xs) {
+    display: none;
+  }
+}
+
+.hide-sm {
+  @include mq($from: xs, $until: md) {
+    display: none;
+  }
+}
+
+.hide-md {
+  @include mq($from: md, $until: lg) {
+    display: none;
+  }
+}
+
+.hide-lg {
+  @include mq($from: lg, $until: xl) {
+    display: none;
+  }
+}
+
+.hide-xl {
+  @include mq(xl) {
+    display: none;
+  }
+}

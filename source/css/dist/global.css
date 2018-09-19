@@ -1,0 +1,339 @@
+html {
+  font-size: 1rem;
+}
+
+html, body {
+  font-family: "Avenir LT W01 65 Medium", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.42857;
+}
+
+b, strong {
+  font-family: "Avenir LT W01 85 Heavy", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+i, em {
+  font-family: "AvenirLTW01-65MediumObl", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  margin: 10px 0;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  text-decoration: none;
+}
+
+input, select, textarea {
+  font-family: "Avenir LT W01 65 Medium", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+label {
+  font-family: "Avenir LT W01 85 Heavy", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.f-regular {
+  font-family: "Avenir LT W01 55 Roman", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.f-italic {
+  font-family: "AvenirLTW01-55Oblique", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.f-bold {
+  font-family: "Avenir LT W01 85 Heavy", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.f-bold-italic {
+  font-family: "AvenirLTW01-85HeavyObli", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.f-medium {
+  font-family: "Avenir LT W01 65 Medium", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.f-medium-italic {
+  font-family: "AvenirLTW01-65MediumObl", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.f-light {
+  font-family: "Avenir LT W01 35 Light", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.f-light i,
+.f-light em {
+  font-family: "AvenirLTW01-35LightObli", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.f-light-italic {
+  font-family: "AvenirLTW01-35LightObli", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.f-light-italic i,
+.f-light-italic em {
+  font-family: "AvenirLTW01-35LightObli", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.f-black {
+  font-family: "Avenir LT W01 95 Black", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.f-black i,
+.f-black em {
+  font-family: "AvenirLTW01-95BlackObli", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.f-black b,
+.f-black strong {
+  font-family: "Avenir LT W01 95 Black", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.f-black-italic {
+  font-family: "AvenirLTW01-95BlackObli", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.f-black-italic i,
+.f-black-italic em {
+  font-family: "AvenirLTW01-95BlackObli", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.f-black-italic b,
+.f-black-italic strong {
+  font-family: "Avenir LT W01 95 Black", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.f-handwriting,
+.f-handwriting i,
+.f-handwriting em,
+.f-handwriting strong,
+.f-handwriting b {
+  font-family: "Los Angeles Autograph", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+[class*='heading--'] {
+  font-family: "Avenir LT W01 95 Black", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+[class*='heading--'] em {
+  font-family: "Los Angeles Autograph", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  display: block;
+  font-size: 130%;
+  font-weight: normal;
+  margin-bottom: -10px;
+  margin-left: 2px;
+  text-transform: none;
+}
+
+@media (max-width: 29.99em) {
+  [class*='heading--'] em {
+    padding-top: 10px;
+  }
+}
+
+.heading--sa {
+  font-size: 1.875rem;
+}
+
+@media (min-width: 62em) {
+  .heading--sa {
+    font-size: 2.5rem;
+  }
+}
+
+.heading--xs {
+  font-size: 1rem;
+  text-transform: none;
+}
+
+.heading--sm {
+  font-size: 2.25rem;
+}
+
+@media (min-width: 62em) {
+  .heading--sm {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .heading--sm {
+    font-size: 3.75rem;
+  }
+}
+
+.heading--md {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 62em) {
+  .heading--md {
+    font-size: 3.125rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .heading--md {
+    font-size: 4.0625rem;
+  }
+}
+
+.heading--lg {
+  font-size: 2.8125rem;
+}
+
+@media (min-width: 48em) {
+  .heading--lg {
+    font-size: 3.125rem;
+  }
+}
+
+@media (min-width: 62em) {
+  .heading--lg {
+    font-size: 4.375rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .heading--lg {
+    font-size: 5.625rem;
+  }
+}
+
+.heading--xl {
+  font-size: 3.25rem;
+}
+
+@media (min-width: 62em) {
+  .heading--xl {
+    font-size: 4.375rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .heading--xl {
+    font-size: 6.25rem;
+  }
+}
+
+.text--small {
+  font-size: 0.75rem;
+}
+
+@media (min-width: 75em) {
+  .text--small {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 112.5em) {
+  .text--small {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 29.99em) {
+  .hide-xs {
+    display: none;
+  }
+}
+
+@media (min-width: 30em) and (max-width: 61.99em) {
+  .hide-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 62em) and (max-width: 74.99em) {
+  .hide-md {
+    display: none;
+  }
+}
+
+@media (min-width: 75em) and (max-width: 112.49em) {
+  .hide-lg {
+    display: none;
+  }
+}
+
+@media (min-width: 112.5em) {
+  .hide-xl {
+    display: none;
+  }
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=global.css.map */

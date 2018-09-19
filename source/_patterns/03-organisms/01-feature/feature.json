@@ -1,0 +1,20 @@
+{
+  "title": "Important feature",
+  "image": {
+    "src": "http://placeimg.com/1280/720/food"
+  },
+  "text": "You should read more about it",
+  "buttons": [
+    {
+      "url": "#",
+      "text": "Go on...",
+      "icon": false
+    },
+    {
+      "url": "#",
+      "text": "Read more",
+      "style": "more"
+    }
+  ],
+  "style": "black"
+}

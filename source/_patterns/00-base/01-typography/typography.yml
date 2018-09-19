@@ -1,0 +1,75 @@
+items:
+  - name: $base-font-size
+    value: 16px
+  - name: $base-line-height
+    value: '1.428571429'
+  - name: $base-font-stack.avenir.light.family
+    value: '"AvenirLTW0135Light",sans-serif'
+  - name: $base-font-stack.avenir.light.weight
+    value: 200
+  - name: $base-font-stack.avenir.light.style
+    value: normal
+  - name: $base-font-stack.avenir.lightItalic.family
+    value: '"AvenirLTW01-35LightObli",sans-serif'
+  - name: $base-font-stack.avenir.lightItalic.weight
+    value: 200
+  - name: $base-font-stack.avenir.lightItalic.style
+    value: italic
+  - name: $base-font-stack.avenir.regular.family
+    value: '"AvenirLTW0155Roman",sans-serif'
+  - name: $base-font-stack.avenir.regular.weight
+    value: 400
+  - name: $base-font-stack.avenir.regular.style
+    value: normal
+  - name: $base-font-stack.avenir.italic.family
+    value: '"AvenirLTW01-55Oblique",sans-serif'
+  - name: $base-font-stack.avenir.italic.weight
+    value: 400
+  - name: $base-font-stack.avenir.italic.style
+    value: italic
+  - name: $base-font-stack.avenir.medium.family
+    value: '"AvenirLTW0165Medium",sans-serif'
+  - name: $base-font-stack.avenir.medium.weight
+    value: 500
+  - name: $base-font-stack.avenir.medium.style
+    value: normal
+  - name: $base-font-stack.avenir.mediumItalic.family
+    value: '"AvenirLTW01-65MediumObl",sans-serif'
+  - name: $base-font-stack.avenir.mediumItalic.weight
+    value: 500
+  - name: $base-font-stack.avenir.mediumItalic.style
+    value: italic
+  - name: $base-font-stack.avenir.bold.family
+    value: '"AvenirLTW0185Heavy",sans-serif'
+  - name: $base-font-stack.avenir.bold.weight
+    value: 700
+  - name: $base-font-stack.avenir.bold.style
+    value: normal
+  - name: $base-font-stack.avenir.boldItalic.family
+    value: '"AvenirLTW01-85HeavyObli",sans-serif'
+  - name: $base-font-stack.avenir.boldItalic.weight
+    value: 700
+  - name: $base-font-stack.avenir.boldItalic.style
+    value: italic
+  - name: $base-font-stack.avenir.black.family
+    value: '"AvenirLTW0195Black",sans-serif'
+  - name: $base-font-stack.avenir.black.weight
+    value: 700
+  - name: $base-font-stack.avenir.black.style
+    value: normal
+  - name: $base-font-stack.avenir.blackItalic.family
+    value: '"AvenirLTW01-95BlackObli",sans-serif'
+  - name: $base-font-stack.avenir.blackItalic.weight
+    value: 700
+  - name: $base-font-stack.avenir.blackItalic.style
+    value: italic
+  - name: $base-font-stack.handwriting.regular.family
+    value: '"LosAngelesAutograph",sans-serif'
+  - name: $base-font-stack.handwriting.regular.weight
+    value: 400
+  - name: $base-font-stack.handwriting.regular.style
+    value: normal
+meta:
+  description: >-
+    To add to these items, edit the file at
+    <code>_patterns/00-base/01-typography/_variables.scss</code>

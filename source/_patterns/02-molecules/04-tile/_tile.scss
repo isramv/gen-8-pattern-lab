@@ -1,0 +1,46 @@
+// Tile
+//
+// The tile component is both independent and Paragraph-enabled. This means
+// that the `tile.twig` template can be used independently in Drupal templates
+// via twig, and that it also has a [Paragraph entity](/admin/structure/paragraphs_type/tile)
+// in Drupal that editors can use to create Tile content in the administrative
+// UI with the following fields:
+//
+// - *Tile image* `field_image`: The main image that displays inside the tile.
+// - *Tile image hover* `field_image_hover`: The image that displays when hovering
+//   over the main tile image.
+// - *Tile link* `field_link`: An optional link field that be used to provide a
+//   URL for the tile.
+// - *Tile style* `field_style`: Provides access to the style component in order
+//   to assign a background and text color that best matches the uploaded image.
+//
+// Markup:
+// <aside class="tile layout__item paragraph--type--tile style--blue tile--hover" style="display: inline-block;">
+//   <div class="field field--name-field-image field--type-entity-reference field--label-hidden field__item">
+//     <img src="/sites/default/files/images/2017-10/mla-home-stats-1.jpg" width="584" height="584">
+//   </div>
+//   <div class="field tile__image-hover field--type-entity-reference field--label-hidden field__item">
+//     <img src="/sites/default/files/images/2017-10/factoids-sun-reveal.jpg" width="585" height="585">
+//   </div>
+// </aside>
+//
+// Style guide: Components.Tile
+
+.tile {
+  align-items: stretch;
+  display: flex;
+  img {
+    display: block;
+  }
+  .tile__image-hover {
+    display: none;
+  }
+  &:hover {
+    .tile__image {
+      display: none;
+    }
+    .tile__image-hover {
+      display: block;
+    }
+  }
+}

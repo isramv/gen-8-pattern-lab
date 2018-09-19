@@ -1,0 +1,31 @@
+{% set style = style|default('default') %}
+{% set classes = [
+  'tile',
+  'style--' ~ style|replace({ '_': '-' }),
+]|merge(classes|default([])) %}
+
+{% set tile_content %}
+  <div class="tile__image">
+    {% include '@atoms/05-images/image.twig' with {
+      'image': image
+    } only %}
+  </div>
+  <div class="tile__image-hover">
+    {% include '@atoms/05-images/image.twig' with {
+      'image': image_hover
+    } only %}
+  </div>
+{% endset %}
+
+<aside class="{{ classes|join(' ')|trim }}">
+  {% if url %}
+    {% include '@atoms/01-link/link.twig' with {
+      'url': url,
+      'target': target,
+      'rel': rel,
+      'content': tile_content
+    } %}
+  {% else %}
+    {{ tile_content }}
+  {% endif %}
+</aside>

@@ -1,0 +1,19 @@
+{
+  "name": "gen8patternlab",
+  "version": "0.0.0",
+  "description": "Pattern Lab for Gen 8",
+  "main": "gulpfile.js",
+  "private": true,
+  "dependencies": {
+    "cthreem-core": "^1.1.1",
+    "gulp-sass-export": "0.0.3",
+    "sass-mq": "^5.0.0",
+    "susy": "^3.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "compile": "gulp compile",
+    "start": "gulp default",
+    "gulp": "gulp"
+  }
+}

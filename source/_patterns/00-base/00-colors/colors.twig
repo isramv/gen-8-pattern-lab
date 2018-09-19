@@ -1,0 +1,12 @@
+
+<ul class="sg-colors">
+  {% for item in items %}
+    <li>
+      <span class="sg-swatch" style="background-color: {{ item.value|raw }}"></span>
+      <div class="sg-label">
+        <code class="sg-colors__value">{{ item.value }}</code>
+        <code class="sg-colors__name">{{ item.name }}</code>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

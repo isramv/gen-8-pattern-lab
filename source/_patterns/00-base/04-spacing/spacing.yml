@@ -1,0 +1,27 @@
+items:
+  - name: $spacer
+    value: 10px
+  - name: $spacer-xs
+    value: ($spacer * 0.5)
+  - name: $spacer-sm
+    value: 10px
+  - name: $spacer-md
+    value: ($spacer * 2)
+  - name: $spacer-lg
+    value: ($spacer * 3)
+  - name: $spacer-xl
+    value: ($spacer * 4)
+  - name: $spacing.xs
+    value: ($spacer * 0.5)
+  - name: $spacing.sm
+    value: $spacer
+  - name: $spacing.md
+    value: ($spacer * 2)
+  - name: $spacing.lg
+    value: ($spacer * 3)
+  - name: $spacing.xl
+    value: ($spacer * 4)
+meta:
+  description: >-
+    To add to these items, edit the file at
+    <code>_patterns/00-base/04-spacing/_variables.scss</code>

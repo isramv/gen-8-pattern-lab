@@ -1,0 +1,119 @@
+.button,
+input.button,
+button.button {
+  @include font('avenir', 'medium');
+  @include font-size(16px);
+  @include font-size(22px, 'lg');
+  background: transparent;
+  border: 2px solid currentColor;
+  border-radius: 0;
+  color: currentColor;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px 0;
+  padding: 5px 10px;
+
+  & + button,
+  & + .button {
+    margin-left: $spacer-md;
+  }
+}
+
+a.button {
+  text-decoration: none;
+}
+
+
+// Button style: More
+//------------------------------------------------------------------------------
+
+.button--more {
+  @include font-size(16px);
+  @include font-size(18px, 'lg');
+  @include font('avenir', 'bold');
+  border: 0;
+  padding: 0;
+
+  &::after {
+    border: 1px solid currentColor;
+    content: '➞';
+    margin-left: 5px;
+    padding: 0 5px;
+  }
+}
+
+a.button--more {
+  text-decoration: none;
+}
+
+
+// Button style: Link
+//------------------------------------------------------------------------------
+
+.button--link {
+  @include font-size(12px);
+  @include font-size(15px, 'sm');
+  @include font-size(20px, 'md');
+  border: 0;
+  margin: $spacer-md 0 $spacer 0;
+  padding: 0;
+  text-transform: none;
+
+  &, .style--default & {
+    color: #36acef;
+  }
+
+  & + .button {
+    margin-left: $spacer;
+  }
+
+  .fa:first-child {
+    margin-right: $spacer;
+  }
+
+  .fa:only-child {
+    margin-right: 0;
+  }
+
+  .card--profile & {
+    @include font-size(16px, 'md');
+ }
+}
+
+// Button wrapper
+// @todo build in the aligment options to button group!
+//------------------------------------------------------------------------------
+
+.buttons {
+  // float: left;
+  margin-bottom: $spacer;
+  // margin-left: 0;
+  // margin-right: $spacer;
+  margin-top: $spacer;
+  // &--align-right {
+  //   float: right;
+  // }
+  // &--align-left {
+  //   float: left;
+  // }
+  // &--align-center {
+  //   float: none;
+  //   display: block;
+  //   text-align: center;
+  // }
+}
+
+.fa {
+  margin-right: 5px;
+}
+
+// // Button in List component
+// // Responsive behavior of a button inside the list component.
+// ////////////////////////////////////////////////////////////////////////////////
+.list {
+  .button,
+  input.button,
+  button.button {
+    @include font-size(16px, 'lg');
+  }
+}

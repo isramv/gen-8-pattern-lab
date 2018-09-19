@@ -1,0 +1,53 @@
+items:
+  - name: $styles.default.background
+    value: transparent
+  - name: $styles.default.color
+    value: foreground
+  - name: $styles.black.background
+    value: black
+  - name: $styles.black.color
+    value: white
+  - name: $styles.blue.background
+    value: blue
+  - name: $styles.blue.color
+    value: white
+  - name: $styles.blueLight.background
+    value: skyblue
+  - name: $styles.blueLight.color
+    value: white
+  - name: $styles.gray.background
+    value: mediumgray
+  - name: $styles.gray.color
+    value: white
+  - name: $styles.grayLight.background
+    value: lightgray
+  - name: $styles.grayLight.color
+    value: black
+  - name: $styles.green.background
+    value: green
+  - name: $styles.green.color
+    value: white
+  - name: $styles.orange.background
+    value: orange
+  - name: $styles.orange.color
+    value: white
+  - name: $styles.purple.background
+    value: indigo
+  - name: $styles.purple.color
+    value: white
+  - name: $styles.red.background
+    value: red
+  - name: $styles.red.color
+    value: white
+  - name: $styles.yellow.background
+    value: yellow
+  - name: $styles.yellow.color
+    value: black
+  - name: $styles.white.background
+    value: white
+  - name: $styles.white.color
+    value: foreground
+meta:
+  description: >-
+    To add to these items, edit the file at
+    <code>_patterns/02-molecules/00-styles/_variables.scss</code>

@@ -1,0 +1,45 @@
+{% set type = tag|default('link') %}
+{% set icon = icon|default('long-arrow-right') %}
+{% set style = style|default(null) %}
+{% set classes = [
+  'button',
+  style ? 'button--' ~ style|replace({ '_': '-' }),
+]|merge(classes|default([])) %}
+
+{% if style == 'more' %}
+  {% set icon = false %}
+{% endif %}
+
+{%- set button_content -%}
+  {%- if icon -%}
+    {%- set icon -%}
+      {%- include '@atoms/04-icon/icon.twig' with { 'icon': icon } -%}
+    {%- endset -%}
+    {%- if icon_align == 'left' -%}
+      {{ icon -}} {{- text }}
+    {%- else -%}
+      {{ text -}} {{- icon }}
+    {%- endif -%}
+  {%- else -%}
+    {{ text -}}
+  {%- endif -%}
+{%- endset -%}
+
+{% if type == 'button' -%}
+  <button class="{{ classes|join(' ')|trim }}">
+    {{- button_content -}}
+  </button>
+{% endif %}
+
+{% if type == 'link' -%}
+  {%- if url -%}
+    <a class="{{ classes|join(' ')|trim }}" href="{{- url -}}"
+      {%- if target == '_blank' %} target="_blank" rel="noopener"{%- endif -%}
+      {%- if rel -%} rel="{{ rel }}"{%- endif -%}>
+      {{- button_content -}}</a>
+  {%- else -%}
+    {# Anchors don't require an href in HTML. Use for drop-down menus with no
+    destination, current page of a pager or tab, etc. #}
+    <a class="{{ classes|join(' ')|trim }}">{{ button_content }}</a>
+  {%- endif -%}
+{%- endif -%}

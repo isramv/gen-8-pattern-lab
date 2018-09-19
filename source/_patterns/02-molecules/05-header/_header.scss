@@ -1,0 +1,35 @@
+.header {
+  padding-bottom: $spacer-lg;
+  padding-left: gutter(); // sass-lint:disable empty-args
+  padding-right: gutter(); // sass-lint:disable empty-args
+  padding-top: $spacer-lg;
+
+  &, &.style--default {
+    background-color: color(light-gray);
+  }
+
+  @include mq(sm) {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .layout__container {
+    padding-left: span(1);
+    padding-right: span(1);
+    @include mq(sm) {
+      @supports (display: grid) {
+        align-items: center;
+        grid-gap: 0 gutter(); // sass-lint:disable empty-args
+      }
+    }
+  }
+}
+
+.header__link {
+  display: none;
+  @include mq(sm) {
+    display: inline-block;
+    float: right;
+  }
+}

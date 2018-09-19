@@ -1,0 +1,126 @@
+// Styles
+//
+// Styles are applied via the `field_style` field, to a variety of different
+// entities within Drupal. The available options are managed in the `base_utils`
+// module, specifically the `base_utils_style_options()` function. These options
+// are exposed to editors on certain entities such as hero, tout, image, etc.
+//
+// .style--default - Transparent background, inherits body text color/accents.
+// .style--black - Black background, white text.
+// .style--blue - Blue background, white text.
+// .style--blue-light - Light blue background, white text.
+// .style--gray-light - Light gray background, body text.
+// .style--green - Green background, white text.
+// .style--orange - Orange background, white text.
+// .style--purple - Purple background, white text.
+// .style--red - Red background, white text.
+// .style--yellow - Yellow background, white text.
+// .style--white - White background, black text.
+//
+//------------------------------------------------------------------------------
+
+.style--default {
+  background-color: $color-background;
+  color: $color-foreground;
+
+  a:not([class*='button']) {
+    color: color(link-blue);
+  }
+}
+
+.style--transparent {
+  background-color: transparent;
+  color: $color-foreground;
+
+  a:not([class*='button'])  {
+    color: color(link-blue);
+  }
+}
+
+.style--black {
+  background-color: #000;
+
+  &, a:not([class*='button']) {
+    color: color(white);
+  }
+}
+
+.style--blue {
+  background-color: color(blue);
+
+  &, a:not([class*='button']) {
+    color: color(white);
+  }
+}
+
+.style--blue-light {
+  background-color: color(sky-blue);
+
+  &, a:not([class*='button']) {
+    color: color(white);
+  }
+}
+
+.style--gray {
+  background-color: color(medium-gray);
+
+  &, a:not([class*='button']) {
+    color: color(white);
+  }
+}
+
+.style--gray-light {
+  background-color: color(light-gray);
+
+  &, a:not([class*='button']) {
+    color: color(black);
+  }
+}
+
+.style--green {
+  background-color: color(green);
+
+  &, a:not([class*='button']) {
+    color: color(white);
+  }
+}
+
+.style--orange {
+  background-color: color(orange);
+
+  &, a:not([class*='button']) {
+    color: color(white);
+  }
+}
+
+.style--purple {
+  background-color: color(indigo);
+
+  &, a:not([class*='button']) {
+    color: color(white);
+  }
+}
+
+.style--red {
+  background-color: color(red);
+
+  &, a:not([class*='button']) {
+    color: color(white);
+  }
+}
+
+.style--yellow {
+  background-color: color(yellow);
+
+  &, a:not([class*='button']) {
+    color: color(black);
+  }
+}
+
+.style--white {
+  background-color: color(white);
+
+  &, a:not([class*='button']) {
+    color: $color-foreground;
+  }
+}

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Los Angeles Autograph';
+  font-weight:  400;
+  // sass-lint:disable-all
+  src: url('../../fonts/LosAngelesAutograph-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/LosAngelesAutograph-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../fonts/LosAngelesAutograph-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../../fonts/LosAngelesAutograph-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../fonts/LosAngelesAutograph-Regular.svg#8d7a0b96621a0d83a7ee53cc043cec31') format('svg'); /* Legacy iOS */
+  // sass-lint:enable-all
+}

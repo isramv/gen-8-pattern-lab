@@ -1,0 +1,15 @@
+{% set style = style|default(null) %}
+{% set classes = [
+  style ? 'style--' ~ style|replace({ '_': '-' }),
+]|merge(classes|default([])) %}
+
+{%- if url -%}
+  <a class="{{ classes|join(' ')|trim }}" href="{{- url -}}"
+    {%- if target == '_blank' %} target="_blank" rel="noopener"{%- endif -%}
+    {%- if rel -%} rel="{{ rel }}"{%- endif -%}>
+    {{- content -}}</a>
+{%- else -%}
+  {# Anchors don't require an href in HTML. Use for drop-down menus with no
+  destination, current page of a pager or tab, etc. #}
+  <a class="{{ classes|join(' ')|trim }}">{{ content }}</a>
+{%- endif -%}

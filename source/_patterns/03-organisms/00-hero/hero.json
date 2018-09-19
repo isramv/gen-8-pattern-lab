@@ -1,0 +1,19 @@
+{
+  "title": "I need a hero!",
+  "image": {
+    "src": "https://picsum.photos/1280/720"
+  },
+  "text": "I'm holding out for a hero 'til the end of the night",
+  "buttons": [
+    {
+      "url": "#",
+      "text": "Do something"
+    },
+    {
+      "url": "#",
+      "text": "right now...",
+      "icon": "play"
+    }
+  ],
+  "style": "white"
+}

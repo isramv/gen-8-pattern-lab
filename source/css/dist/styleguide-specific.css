@@ -1,0 +1,56 @@
+/**
+ * This stylesheet is for styles you want to include only when the interface is
+ * being viewed within Pattern Lab. This is helpful for displaying demo styles
+ * for grids, animations, color swatches, etc. It's also helpful for overriding
+ * context-specific styles like fixed or absolutely positioned elements. These
+ * styles will not be your production CSS.
+ */
+.sg-colors {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sg-colors li {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.sg-colors .sg-label {
+  font-size: 85%;
+  padding: 0.25rem;
+}
+
+.sg-colors .sg-label code {
+  display: block;
+}
+
+.sg-swatch {
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px 5px 0 0;
+  display: block;
+  height: 4rem;
+}
+
+.sg-subtype h2 {
+  color: #000;
+}
+
+.sg-subtype h2 a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.sg-subtype h2 a:hover, .sg-subtype h2 a:focus {
+  text-decoration: underline;
+}
+
+.sg-pattern-state.documentation::before {
+  color: rebeccapurple;
+}
+
+/*# sourceMappingURL=styleguide-specific.css.map */

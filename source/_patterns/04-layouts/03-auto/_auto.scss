@@ -1,0 +1,42 @@
+[data-layout='layout__auto'] {
+  @include mq(sm) {
+    > * {
+      float: left;
+    }
+
+    @for $columns from 1 through $grid-columns {
+      &[data-items='#{$columns}'] {
+        $layout: (
+          'columns': susy-repeat($columns),
+          'gutters': 0,
+        );
+
+        > * {
+          margin-right: gutter($layout);
+          width: span(1, $layout);
+        }
+      }
+    }
+
+    > *:last-child {
+      margin-right: 0;
+    }
+
+    @supports (display: grid) {
+      @for $columns from 1 through $grid-columns {
+        &[data-items='#{$columns}'] {
+          grid-template-columns: repeat($columns, 1fr);
+        }
+      }
+
+      // Reset problematic fallback code.
+      &[data-items] {
+        > * {
+          margin-right: 0;
+          min-height: auto;
+          width: auto;
+        }
+      }
+    }
+  }
+}

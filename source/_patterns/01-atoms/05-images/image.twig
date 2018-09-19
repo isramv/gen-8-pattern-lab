@@ -1,0 +1,15 @@
+{% set style = style|default(null) %}
+{% set classes = [
+  'image',
+  style ? 'image--' ~ style|replace({ '_': '-' }),
+]|merge(classes|default([])) %}
+
+{% if image is iterable %}
+  <img class="{{ classes|join(' ')|trim }}" src="{{ image.src }}"
+    {%- if image.srcset -%} srcset="{{ image.srcset }}"{%- endif -%}
+    {%- if image.sizes -%} sizes="{{ image.sizes }}"{%- endif -%}
+    {%- if image.alt -%} alt="{{ image.alt }}" {%- endif -%}
+    {%- if image.title -%} title="{{ image.title }}" {%- endif -%}
+  />
+{% endif %}
+

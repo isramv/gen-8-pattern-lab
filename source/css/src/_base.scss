@@ -1,0 +1,13 @@
+// IMPORTANT NOTE!
+//------------------------------------------------------------------------------
+// This file, and the partials being imported should not produce any output.
+// The purpose of it is to load all variables and dependencies when creating a
+// new CSS file.
+//------------------------------------------------------------------------------
+
+@import 'susy/sass/susy';
+@import 'sass-mq/mq';
+
+@import '../../_patterns/00-base/variables';
+@import '../../_patterns/00-base/functions';
+@import '../../_patterns/00-base/mixins';

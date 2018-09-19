@@ -1,0 +1,17 @@
+items:
+  - name: $grid-columns
+    value: '12'
+  - name: $grid-container
+    value: 100%
+  - name: $grid-column-gap
+    value: 30px
+  - name: $grid-row-gap
+    value: '0'
+  - name: $grid-gutter-susy
+    value: 30px
+  - name: $grid-row-min-height
+    value: 50px
+meta:
+  description: >-
+    To add to these items, edit the file at
+    <code>_patterns/00-base/03-grid/_variables.scss</code>

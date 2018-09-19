@@ -1,0 +1,106 @@
+.card {
+  background: color(white);
+  color: color(black);
+
+  @include mq($until: xs) {
+    margin-bottom: 50px;
+    text-align: justify;
+  }
+
+  &__title {
+    @include font('avenir', 'bold');
+    @include font-size(17px);
+    margin-bottom: 5px;
+    text-transform: none;
+
+    a {
+      color: currentColor;
+      text-decoration: none;
+    }
+  }
+
+  .style--default & .card__title a {
+    color: color(black);
+  }
+
+  &__media {
+    margin-bottom: $spacer-md;
+  }
+
+  &__date {
+    display: block;
+    margin-bottom: $spacer-md;
+  }
+}
+
+.card--profile {
+  display: grid;
+  grid-column-gap: $spacer-md;
+  grid-template-columns: 100px auto;
+  grid-template-rows: $spacer-md auto;
+  padding: $spacer-md 0;
+  text-align: left;
+
+  @include mq(sm) {
+    display: block;
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+
+  .card__media {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    margin-bottom: 0;
+
+    @include mq(sm) {
+      width: 100%;
+    }
+  }
+
+  .card__body {
+    @include mq(sm) {
+      padding-left: $spacer-sm;
+      padding-right: $spacer-sm;
+    }
+
+    @include mq(md) {
+      padding-left: $spacer-md;
+      padding-right: $spacer-md;
+    }
+  }
+
+  // @todo let this be the default h3 style?
+  .card__title {
+    color: color(black);
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+
+    @include mq(sm) {
+      @include font-size(16px);
+    }
+  }
+
+  .card__content {
+    @include font('avenir', 'bold');
+    @include font-size(12px);
+    @include font-size(16px, 'sm');
+    color: #666;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+
+    @include mq(sm) {
+      @include font('avenir', 'medium');
+    }
+  }
+}
+
+.layout__container {
+  .layout__item.paragraph--type--card {
+    .card--article {
+      padding-bottom: $grid-column-gap;
+      padding-left: $grid-column-gap / 2;
+      padding-right: $grid-column-gap / 2;
+      padding-top: $grid-column-gap;
+    }
+  }
+}

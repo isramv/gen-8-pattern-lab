@@ -1,0 +1,49 @@
+// @import 'base';
+
+// Four column
+//
+// The *4 column* layout styles the direct element descendants in 4 columns of
+// even proportion, taking up 25% for each column.  It is a responsive layout
+// that collapses to a single column on smaller screens.
+//
+// ### Related Libraries
+//
+// - `base/layout__4`
+//
+// Weight: 4
+//
+// Markup: four.html
+//
+// Style guide: Layouts.Four
+
+[data-layout='layout__4'] {
+  $layout: (
+    'columns': susy-repeat(4),
+    'gutters': 0,
+  );
+  > * {
+    width: span(1, $layout);
+  }
+  > *:nth-child(4n + 1),
+  > *:nth-child(4n + 2),
+  > *:nth-child(4n + 3) {
+    clear: both; // IE 11.
+    float: left;
+    margin-right: gutter($layout);
+  }
+  > *:nth-child(4n + 4) {
+    float: left;
+    margin-right: 0;
+  }
+}
+
+@supports (display: grid) {
+  [data-layout='layout__4'] {
+    grid-template-columns: repeat(4, 1fr);
+    > * {
+      grid-column: auto / span 1;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+}

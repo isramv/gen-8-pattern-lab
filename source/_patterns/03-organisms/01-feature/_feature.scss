@@ -1,0 +1,99 @@
+// Default
+// Right-aligned contents, constrained to ~50% width, using the default grid
+// definition.
+//------------------------------------------------------------------------------
+
+.feature {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 380px;
+  max-width: 100%;
+  min-height: 280px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  @include mq(sm) {
+    height: 450px;
+  }
+
+  @include mq(md) {
+    height: 500px;
+  }
+
+  @include mq(lg) {
+    height: 650px;
+  }
+
+  .feature__container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: flex-start;
+    position: absolute;
+    width: 100%;
+  }
+
+  .feature__content {
+    margin: 0;
+    overflow: hidden;
+    padding: 0 span(2);
+    z-index: 1;
+
+    @include mq(sm) {
+      padding: 0 span(1) 0 span(4 wide);
+    }
+
+    @include mq(md) {
+      padding: 0 span(4) 0 span(1);
+    }
+  }
+}
+
+
+// Right
+//
+// Right-aligned contents, constrained to ~50% width, using the default
+// grid definition.
+//------------------------------------------------------------------------------
+
+.feature--right {
+  .feature__container {
+    @include mq(sm) {
+      align-content: flex-end;
+      justify-content: flex-end;
+    }
+  }
+
+  .feature__content {
+    @include mq(sm) {
+      padding-left: span(5 wide);
+      padding-right: span(1);
+    }
+  }
+}
+
+
+// Left
+//
+// Left-aligned contents, constrained to ~50% width, using the default grid
+// definition.
+//------------------------------------------------------------------------------
+
+.feature---left {
+  .feature__container {
+    @include mq(sm) {
+      align-content: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  .feature__content {
+    @include mq(sm) {
+      padding-left: span(1);
+      padding-right: span(5 wide);
+    }
+  }
+}
+

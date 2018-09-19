@@ -1,0 +1,40 @@
+@include mq(sm) {
+  [data-layout='layout__2_60_40'] {
+    $layout: (
+      'columns': susy-repeat(5),
+      'gutters': 0,
+    );
+
+    > *:nth-child(odd) {
+      clear: both; // IE 11.
+      float: left;
+      margin-right: gutter($layout);
+      width: span(3, $layout);
+    }
+
+    > *:nth-child(even) {
+      float: right;
+      margin-right: 0;
+      width: span(2, $layout);
+    }
+
+    @supports (display: grid) {
+      grid-template-columns: repeat(5, 1fr);
+
+      > *:nth-child(odd) {
+        grid-column: auto / span 3;
+      }
+
+      > *:nth-child(even) {
+        grid-column: auto / span 2;
+      }
+
+      // Reset problematic fallback code.
+      > *:nth-child(odd),
+      > *:nth-child(even) {
+        margin-right: 0;
+        width: auto;
+      }
+    }
+  }
+}

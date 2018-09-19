@@ -1,0 +1,47 @@
+[data-layout='layout__2_fixed'] {
+  // Fallback
+  $layout: (
+    'columns': susy-repeat(2),
+    'gutters': 0,
+  );
+
+  > * {
+    width: span(1, $layout);
+  }
+
+  > *:nth-child(odd) {
+    clear: both; // IE 11.
+    float: left;
+    margin-right: gutter($layout);
+  }
+
+  > *:nth-child(even) {
+    float: right;
+    margin-right: 0;
+  }
+
+  // Note: This code is usually in `_layouts.base.scss` which is shared across
+  // all layouts. However, this layout overrides the default responsive behavior
+  // in favor of a fixed layout regardless of screen size.
+
+  // Flexbox enhancement
+  @supports (display: flex) {
+    align-items: stretch;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  // Grid
+  @supports (display: grid) {
+    display: grid;
+    grid-auto-rows: minmax($grid-row-min-height, auto);
+    grid-gap: $grid-row-gap;
+    grid-template-columns: repeat(2, 1fr);
+
+    > * {
+      grid-column: auto / span 1;
+      margin-right: 0; // Prevents iframes from expanding the width of the columns.
+      overflow: hidden;
+      width: auto;
+    }
+  }
+}

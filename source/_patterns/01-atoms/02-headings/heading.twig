@@ -1,0 +1,15 @@
+{% set level = level|default('2') %}
+{% set style = style|default(null) %}
+{% set classes = [
+  style ? 'heading--' ~ style|replace({ '_': '-' }),
+]|merge(classes|default([])) %}
+
+{% if url %}
+  {% set heading %}
+    <a href="{{ url }}">{{- heading -}}</a>
+  {% endset %}
+{% endif %}
+
+<h{{ level }} class="{{ classes|join(' ') }}">
+  {{- heading -}}
+</h{{ level }}>

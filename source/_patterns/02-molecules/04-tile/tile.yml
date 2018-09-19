@@ -1,0 +1,5 @@
+image:
+  src: 'http://placeimg.com/585/585/tech'
+image_hover:
+  src: 'http://placeimg.com/585/585/people'
+target: '_blank'

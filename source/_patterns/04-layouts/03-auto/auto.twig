@@ -1,0 +1,23 @@
+{% set title %}<h2>{{ heading }} with 2 items</h2>{% endset %}
+{% include 'layout.twig' with {
+  'layout' : 'auto',
+  'heading' : title,
+  'items_count' : items|slice(0, 2)|length,
+  'items': items|slice(0, 2)
+} %}
+
+{% set title %}<h2>{{ heading }} with 3 items</h2>{% endset %}
+{% include 'layout.twig' with {
+  'layout' : 'auto',
+  'heading' : title,
+  'items_count' : items|slice(0, 3)|length,
+  'items': items|slice(0, 3)
+} %}
+
+{% set title %}<h2>{{ heading }} with 6 items</h2>{% endset %}
+{% include 'layout.twig' with {
+  'layout' : 'auto',
+  'heading' : title,
+  'items_count' : items|slice(0, 6)|length,
+  'items': items|slice(0, 6)
+} %}

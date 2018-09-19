@@ -1,0 +1,33 @@
+// Global  Dependencies
+//------------------------------------------------------------------------------
+
+@import 'base';
+
+
+// Elements
+//------------------------------------------------------------------------------
+
+@import '../../_patterns/00-base/01-typography/elements';
+@import '../../_patterns/01-atoms/02-headings/elements';
+@import '../../_patterns/02-molecules/01-forms/elements';
+@import '../../_patterns/01-atoms/01-link/elements';
+@import '../../_patterns/01-atoms/05-images/elements';
+
+
+// Helpers
+//------------------------------------------------------------------------------
+
+@import '../../_patterns/00-base/01-typography/helpers';
+@import '../../_patterns/01-atoms/02-headings/helpers';
+@import '../../_patterns/01-atoms/03-text/helpers';
+@import '../../_patterns/01-atoms/10-visibility/helpers';
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}

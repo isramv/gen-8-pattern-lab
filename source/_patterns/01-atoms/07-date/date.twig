@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * <time> element template.
+ *
+ * Available variables:
+ * - classes: Optional CSS classes to apply to the `<time>` element.
+ * - timestamp: A Unix timestamp is required to use with `format_date()` and
+ *   `date()`.
+ * - format (string): Formatter for date.
+ */
+#}
+
+{% set style = style|default('default') %}
+{% set format = format ? format : 'F d, Y' %}
+{% set classes = classes|default([]) %}
+
+{% if timestamp %}
+  {% set date_display = timestamp|date(format) %}
+  {% set date_time = timestamp|date('Y-m-d\TH:i:s') %}
+  <time class="{{ classes|join(' ')|trim }}" datetime="{{ date_time }}">
+    {{ date_display }}
+  </time>
+{% endif %}

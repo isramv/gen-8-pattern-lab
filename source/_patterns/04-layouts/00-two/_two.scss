@@ -1,0 +1,33 @@
+@include mq(sm) {
+  [data-layout='layout__2'] {
+    $layout: (
+      'columns': susy-repeat(2),
+      'gutters': 0,
+    );
+
+    > * {
+      width: span(1, $layout);
+    }
+
+    > *:nth-child(odd) {
+      clear: both; // IE 11.
+      float: left;
+      margin-right: gutter($layout); // sass-lint:disable-line empty-args
+    }
+
+    > *:nth-child(even) {
+      float: right;
+      margin-right: 0;
+    }
+
+    @supports (display: grid) {
+      grid-template-columns: repeat(2, 1fr);
+
+      > * {
+        grid-column: auto / span 1;
+        margin-right: 0;
+        width: auto;
+      }
+    }
+  }
+}

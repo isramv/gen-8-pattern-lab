@@ -1,0 +1,8 @@
+
+input, select, textarea {
+  @include font('avenir', 'medium');
+}
+
+label {
+  @include font('avenir', 'bold');
+}

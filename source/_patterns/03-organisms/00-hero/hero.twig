@@ -1,0 +1,48 @@
+{% set background_style = image.src ? "background-image: url('" ~ image.src ~ "')" : '' %}
+{% set type = type|default('image') %}
+{% set style = style|default('default') %}
+{% set classes = [
+  'hero',
+  'hero-has-' ~ type,
+  style ? 'style--' ~ style|replace({ '_': '-' })
+]|merge(classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}" style="{{ background_style }}">
+  <div class="hero__container">
+    {# @todo Create and use a PL template variant for this. #}
+    {% if type == 'video' and video %}
+      <div class="hero__video">{{ video }}</div>
+    {% endif %}
+    <div class="hero__content">
+      {% if title %}
+        {% include '@atoms/02-headings/heading.twig' with {
+          'classes': ['hero__title'],
+          'heading': title,
+          'level': 1,
+          'style': 'xl',
+          'url': false
+        } only %}
+      {% endif %}
+      {% if text %}
+        <div class="hero__text">
+          {{ text }}
+        </div>
+      {% endif %}
+      {% if buttons %}
+        <div class="hero__buttons">
+          {% if buttons['#theme'] %}
+            {{ buttons }}
+          {% else %}
+            {% for button in buttons %}
+              {% include '@atoms/00-button/button.twig' with {
+                'url': button.url,
+                'text': button.text,
+                'icon': button.icon|default(false)
+              } only %}
+            {% endfor %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

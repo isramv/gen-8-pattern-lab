@@ -1,0 +1,36 @@
+{% set header = [] %}
+
+{% if title %}
+  {% set title %}
+    <h2 class="header__title heading--md">{{ title }}</h2>
+  {% endset %}
+  {% set header = header|merge([title]) %}
+{% endif %}
+
+{% if text %}
+  {% set text %}
+    <div class="header__text">{{ text }}</div>
+  {% endset %}
+  {% set header = header|merge([text]) %}
+{% endif %}
+
+{% if more_link.url and more_link.text %}
+  {% set link %}
+    {% include '@atoms/00-button/button.twig' with {
+      'classes': ['header__link'],
+      'text': more_link.text,
+      'url': more_link.url,
+      'icon': false,
+      'style': 'more'
+    } only %}
+  {% endset %}
+  {% set header = header|merge([link]) %}
+{% endif %}
+
+{% include '@layouts/layout.twig' with {
+  'classes': ['header'],
+  'items_count': header|length,
+  'items': header,
+  'layout': 'auto',
+  'tag': 'header'
+} only %}

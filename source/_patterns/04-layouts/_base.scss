@@ -1,0 +1,57 @@
+
+.layout__wrapper {
+  @include clearfix;
+}
+.layout__container {
+  margin: 0 auto;
+}
+
+
+// Base Grid
+// This is the base class for the grid styles. It is 100% of the single column
+// grid CSS, and the base for the others.
+
+[data-layout] {
+  > * {
+    margin-bottom: $grid-row-gap;
+    min-height: $grid-row-min-height;
+  }
+  // This doesn't apply to IE11. IE11 does not support @supports, so this code
+  // is ignored, despite Flexbox being partially supported. There are a ton of
+  // bugs, and this code is enhancement-only (equal height columns), so not
+  // worth the trouble there. Reference:
+  // http://caniuse.com/#feat=css-supports-api
+  // http://caniuse.com/#feat=flexbox
+  @include mq(sm) {
+    @supports (display: flex) {
+      align-items: stretch;
+      display: flex;
+      flex-flow: row wrap;
+    }
+    @supports (display: grid) {
+      display: grid;
+      grid-auto-rows: minmax($grid-row-min-height, auto);
+      grid-gap: $grid-row-gap;
+      > * {
+        // Override the margin applied above to act as gutters where grid isn't
+        // supported.
+        margin-bottom: 0;
+        // This prevents iframes from expanding the width of the columns.
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+// Single column layouts (default) shouldn't have an display applied.
+[data-layout='layout__default'] {
+  display: initial;
+}
+
+// Detect when grid items need padding and apply
+[data-layout-padding='layout-padding__20'] {
+  @supports (display: grid) {
+    grid-column-gap: 20px;
+    padding: 20px;
+  }
+}

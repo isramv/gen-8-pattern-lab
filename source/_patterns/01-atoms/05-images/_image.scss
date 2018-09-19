@@ -1,0 +1,96 @@
+
+// Image
+//
+// The image component is offered via the 'Image' Paragraph bundle. There are
+// currently 2 options, inline and background (cover) which are detailed below.
+//------------------------------------------------------------------------------
+
+.image {
+  line-height: 0; // Prevent subtle gaps
+  overflow: hidden;
+}
+
+
+// Inline
+
+//
+// The *Inline* option image is an option of the Image Paragraphs component
+// which is offered as an option in the *Image style* field of the *Image*
+// Paragraph entity. The resulting style is a standard inline image that
+// covers 100% of the container. It's recommended to use when you'd like the
+// image to dictate, and potentially expand the height of its parent row, and
+// the neighboring elements.
+//
+// Markup:
+// <div class="layout__item paragraph-type--image image image--default" style="max-height: 50vh;">
+//   <div class="field field--name-field-image field--type-image field--label-hidden field__item">
+//     <img src="/themes/base/img/dist/kss/image.jpg" alt="Example large image">
+//   </div>
+// </div>
+//
+//------------------------------------------------------------------------------
+
+.bg-image {
+  div {
+    display: block;
+
+    @include mq(sm) {
+      align-items: stretch;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  img {
+    display: block;
+    flex: 1;
+    object-fit: cover;
+  }
+}
+
+
+// Background
+//
+// The *Background image* option image is an option of the Image Paragraphs
+// component which is offered as an option in the *Image style* field of the
+// *Image* Paragraph entity. The resulting style is a background image that
+// covers 100% of the container. It's recommended to use this option when you
+// don't want the image dimensions to expand the height of its parent row, and
+// the neighboring elements, but instead to fit neatly into the space available.
+//
+// Markup:
+// <div class="layout__item image image--background"
+// style="background-image: url('/themes/base/img/dist/kss/image.jpg');"> </div>
+//
+//------------------------------------------------------------------------------
+
+.bg-image {
+  display: block;
+  height: 100%;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .image__container {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-bottom: 75%; // 4:3
+      width: 100%;
+    }
+  }
+}
+
+a.paragraph--type--image {
+  img {
+    width: 100%;
+  }
+}

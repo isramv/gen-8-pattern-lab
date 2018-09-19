@@ -1,0 +1,59 @@
+{% set classes = ['card']|merge(classes|default([])) %}
+
+<article class="{{- classes|join(' ')|trim -}}">
+  {% if image or video %}
+    {% set media %}
+      {% if image %}
+        {% include '@atoms/05-images/image.twig' with {
+          'image': image
+        } only %}
+      {% elseif video %}
+        {% include '@atoms/06-video/image.twig' with {
+          'video': video
+        } only %}
+      {% endif %}
+    {% endset %}
+
+    <div class="card__media">
+      {% if url %}
+        <a href="{{ url }}">{{ media }}</a>
+      {% else %}
+        {{ media }}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="card__content">
+    {% if title.text %}
+      {% include '@atoms/02-headings/heading.twig' with {
+        'classes': ['card__title'],
+        'heading': title.text,
+        'level': 3,
+        'url': url
+      } only %}
+    {% endif %}
+
+    {% if date %}
+      {% include '@atoms/07-date/date.twig' with {
+        'timestamp': date,
+        'format': 'F Y',
+        'classes': ['card__date']
+      } only %}
+    {% endif %}
+
+    {% if body %}
+      <div class="card__body">{{ body }}</div>
+    {% endif %}
+
+    {% if more_text and url %}
+      <div class="card__buttons">
+        {% include '@atoms/00-button/button.twig' with {
+          'url': url,
+          'text': more_text|default('Read more'|t),
+          'style': 'more',
+          'icon': false
+        } only %}
+      </div>
+    {% endif %}
+  </div>
+</article>

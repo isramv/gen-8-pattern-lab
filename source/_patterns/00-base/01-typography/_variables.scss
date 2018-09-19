@@ -1,0 +1,64 @@
+$base-font-size: 16px;
+$base-line-height: 1.428571429;
+
+$base-font-stack: (
+  avenir: (
+    light: (
+      family: '"Avenir LT W01 35 Light", sans-serif',
+      weight: 200,
+      style: normal
+    ),
+    lightItalic: (
+      family: '"AvenirLTW01-35LightObli", sans-serif',
+      weight: 200,
+      style: italic
+    ),
+    regular: (
+      family: '"Avenir LT W01 55 Roman", sans-serif',
+      weight: 400,
+      style: normal
+    ),
+    italic: (
+      family: '"AvenirLTW01-55Oblique", sans-serif',
+      weight: 400,
+      style: italic
+    ),
+    medium: (
+      family: '"Avenir LT W01 65 Medium", sans-serif',
+      weight: 500,
+      style: normal
+    ),
+    mediumItalic: (
+      family: '"AvenirLTW01-65MediumObl", sans-serif',
+      weight: 500,
+      style: italic
+    ),
+    bold: (
+      family: '"Avenir LT W01 85 Heavy", sans-serif',
+      weight: 700,
+      style: normal
+    ),
+    boldItalic: (
+      family: '"AvenirLTW01-85HeavyObli", sans-serif',
+      weight: 700,
+      style: italic
+    ),
+    black: (
+      family: '"Avenir LT W01 95 Black", sans-serif',
+      weight: 700,
+      style: normal
+    ),
+    blackItalic: (
+      family: '"AvenirLTW01-95BlackObli", sans-serif',
+      weight: 700,
+      style: italic
+    )
+  ),
+  handwriting: (
+    regular: (
+      family: '"Los Angeles Autograph", sans-serif',
+      weight: 400,
+      style: normal
+    )
+  )
+);

@@ -1,0 +1,29 @@
+.sg-colors {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0;
+  }
+
+  .sg-label {
+    font-size: 85%;
+    padding: 0.25rem;
+    code {
+      display: block;
+    }
+  }
+}
+
+.sg-swatch {
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px 5px 0 0;
+  display: block;
+  height: 4rem;
+}

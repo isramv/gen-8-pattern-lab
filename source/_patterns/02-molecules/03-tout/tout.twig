@@ -1,0 +1,31 @@
+{% set background_style = image.src ? "background-image: url('" ~ image.src ~ "')" : '' %}
+{% set style = style|default('default') %}
+{% set classes = [
+  'tout',
+  'style--' ~ style|replace({ '_': '-' }),
+]|merge(classes|default([])) %}
+
+<article class="{{- classes|join(' ')|trim -}}" style="{{ background_style }}">
+  <div class="tout__container">
+    {% if title.text %}
+      {% include '@atoms/02-headings/heading.twig' with {
+        'classes': ['tout__title'],
+        'heading': title.text,
+        'url': url,
+        'style': 'md'
+      } only %}
+    {% endif %}
+
+    {% if body %}
+      <div class="tout__body">{{ body }}</div>
+    {% endif %}
+
+    {% if buttons %}
+      <div class="tout__buttons">{{ buttons }}</div>
+    {% endif %}
+
+    {% if links %}
+      <div class="tout__links">{{ links }}</div>
+    {% endif %}
+  </div>
+</article>

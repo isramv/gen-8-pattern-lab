@@ -1,0 +1,15 @@
+$spacer: 10px;
+
+$spacer-xs: ($spacer * 0.5);
+$spacer-sm: $spacer;
+$spacer-md: ($spacer * 2);
+$spacer-lg: ($spacer * 3);
+$spacer-xl: ($spacer * 4);
+
+$spacing: (
+  xs: $spacer-xs,
+  sm: $spacer-sm,
+  md: $spacer-md,
+  lg: $spacer-lg,
+  xl: $spacer-xl
+);

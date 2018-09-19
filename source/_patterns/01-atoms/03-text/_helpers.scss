@@ -1,0 +1,10 @@
+// WYSIWYG
+//
+// The *Basic* editor is a CKEditor-enabled text format with very limited,
+// simplified options as well as a couple of text styles.
+
+.text--small {
+  @include font-size(12px);
+  @include font-size(15px, 'lg');
+  @include font-size(18px, 'xl');
+}

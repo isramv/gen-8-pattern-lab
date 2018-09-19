@@ -1,0 +1,59 @@
+// Map Deep Get
+//------------------------------------------------------------------------------
+// Fetch nested keys.
+//
+// @param {Map} $map - Map
+// @param {Arglist} $keys - Keys to fetch
+//
+// @return {*}
+//------------------------------------------------------------------------------
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    @if type-of($map) != 'map' {
+      @warn '`#{$map}` is not a map.';
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+// Contains
+//------------------------------------------------------------------------------
+// Checks if a list contains a value(s).
+//
+// @param {List} $list - The list to check against.
+// @param {List} $values - A single value or list of values to check for.
+//
+// @example
+//   contains($list, $value)
+//
+// @return {Bool}
+//------------------------------------------------------------------------------
+
+@function contains($list, $values...) {
+  @each $value in $values {
+    @if type-of(index($list, $value)) != 'number' {
+      @return false;
+    }
+  }
+  @return true;
+}
+
+// Color
+//------------------------------------------------------------------------------
+// Fetch color from $colors map.
+//
+// @param {Map} $map - Map
+// @param {Arglist} $keys - Keys to fetch
+//
+// @example
+//   color('white')
+//
+// @return {Bool}
+//------------------------------------------------------------------------------
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}

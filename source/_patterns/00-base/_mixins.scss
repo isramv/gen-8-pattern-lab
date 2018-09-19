@@ -1,0 +1,94 @@
+// Clearfix
+//------------------------------------------------------------------------------
+
+@mixin clearfix {
+  &::after,
+  &::before {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+// Font Size
+//------------------------------------------------------------------------------
+// @example
+//   @include font-size(12px);
+//   @include font-size(12px, 'lg');
+//------------------------------------------------------------------------------
+
+@mixin font-size($size: $base-font-size, $breakpoint: null) {
+  @if ($breakpoint != null) {
+    @include mq($breakpoint) {
+      font-size: $size / 16px * 1rem;
+    }
+  } @else {
+    font-size: $size / 16px * 1rem;
+  }
+}
+
+// Font
+//------------------------------------------------------------------------------
+// @example
+//   @include font('avenir', 'light');
+//   @include font('handwriting', 'regular', 'family');
+//------------------------------------------------------------------------------
+
+@mixin font($group, $variant: regular, $properties: family weight style, $font-stack: $base-font-stack) {
+  $font-properties: map-deep-get($font-stack, $group, $variant);
+  @if $font-properties {
+    @each $property, $values in $font-properties {
+      @if contains($properties, $property) {
+        @if $property == 'family' {
+          font-#{$property}: unquote(map-get($font-properties, $property));
+        }
+        @else {
+          font-#{$property}: map-get($font-properties, $property);
+        }
+      }
+    }
+  }
+}
+
+// Visually Hidden
+//
+// Hides elements visually, but keep them available for screen readers. For
+// elements that need to be focusable (e.g. a, button, input, select, textarea)
+// use `true` parameter to maintain focusability.
+//
+// Note: This is also avaialble as a helper class, `.visually-hidden` or
+// `visually-hidden-focusable`.
+//
+// @param {bool} $focusable - Whether the target selector is focusable.
+//
+// @example
+//    div {
+//      @include visually-hidden;
+//    }
+//    a {
+//      @include visually-hidden(true);
+//    }
+//------------------------------------------------------------------------------
+
+@mixin visually-hidden($focusable: false) {
+  & {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal;
+    @if ($focusable) {
+      &:active,
+      &:focus {
+        clip: auto;
+        height: auto;
+        overflow: visible;
+        position: static !important;
+        width: auto;
+      }
+    }
+  }
+}

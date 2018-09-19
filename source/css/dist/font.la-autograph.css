@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Los Angeles Autograph';
+  font-weight: 400;
+  src: url("../../fonts/LosAngelesAutograph-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../../fonts/LosAngelesAutograph-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/LosAngelesAutograph-Regular.woff") format("woff"), url("../../fonts/LosAngelesAutograph-Regular.ttf") format("truetype"), url("../../fonts/LosAngelesAutograph-Regular.svg#8d7a0b96621a0d83a7ee53cc043cec31") format("svg");
+  /* Legacy iOS */
+}
+
+/*# sourceMappingURL=font.la-autograph.css.map */

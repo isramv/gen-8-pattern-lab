@@ -1,0 +1,11 @@
+{% set style = style|default(null) %}
+{% set background_image = image.src ? "background-image: url('" ~ image.src ~ "')" : '' %}
+{% set classes = [
+  'bg-image',
+  style ? 'bg-iamge--' ~ style|replace({ '_': '-' }),
+]|merge(classes|default([])) %}
+
+<div class="{{ classes|join(' ')|trim }}">
+  <div class="image__container" style="{{ background_image }}">
+  </div>
+</div>

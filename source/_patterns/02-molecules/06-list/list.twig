@@ -1,0 +1,29 @@
+{% set style = style|default('default') %}
+{% set classes = [
+  'list',
+  'style--' ~ style|replace({ '_': '-' }),
+]|merge(classes|default([])) %}
+
+<aside class="{{ classes|join(' ')|trim }}">
+  {% if title %}
+    {% if title.text %}
+      {% include '@atoms/02-headings/heading.twig' with {
+        'classes': ['list__title'],
+        'heading': title.text,
+        'style': 'xs'
+      } only %}
+    {% endif %}
+  {% endif %}
+
+  {% if links is iterable %}
+    <ul class="list__items">
+      {% for link in links if link.url %}
+        <li class="list__item"><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if buttons %}
+    {{ buttons }}
+  {% endif %}
+</aside>

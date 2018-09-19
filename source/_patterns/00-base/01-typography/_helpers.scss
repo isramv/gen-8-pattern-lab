@@ -1,0 +1,74 @@
+.f-regular {
+  @include font(avenir);
+}
+
+
+.f-italic {
+  @include font(avenir, italic);
+}
+
+.f-bold {
+  @include font(avenir, bold);
+}
+
+.f-bold-italic {
+  @include font(avenir, boldItalic);
+}
+
+.f-medium {
+  @include font(avenir, medium);
+}
+
+.f-medium-italic {
+  @include font(avenir, mediumItalic);
+}
+
+.f-light {
+  @include font(avenir, light);
+  i,
+  em {
+    @include font(avenir, lightItalic);
+  }
+}
+
+.f-light-italic {
+  @include font(avenir, lightItalic);
+  i,
+  em {
+    @include font(avenir, lightItalic);
+  }
+}
+
+.f-black {
+  @include font(avenir, black);
+  i,
+  em {
+    @include font(avenir, blackItalic);
+  }
+  b,
+  strong {
+    @include font(avenir, black);
+  }
+}
+
+.f-black-italic {
+  @include font(avenir, blackItalic);
+  i,
+  em {
+    @include font(avenir, blackItalic);
+  }
+  b,
+  strong {
+    @include font(avenir, black);
+  }
+}
+
+.f-handwriting {
+  &,
+  i,
+  em,
+  strong,
+  b {
+    @include font(handwriting);
+  }
+}

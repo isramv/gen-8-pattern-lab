@@ -1,0 +1,25 @@
+items:
+  - name: $breakpoint-xs
+    value: 480px
+  - name: $breakpoint-sm
+    value: 768px
+  - name: $breakpoint-md
+    value: 992px
+  - name: $breakpoint-lg
+    value: 1200px
+  - name: $breakpoint-xl
+    value: 1800px
+  - name: $mq-breakpoints.xs
+    value: 480px
+  - name: $mq-breakpoints.sm
+    value: 768px
+  - name: $mq-breakpoints.md
+    value: 992px
+  - name: $mq-breakpoints.lg
+    value: 1200px
+  - name: $mq-breakpoints.xl
+    value: 1800px
+meta:
+  description: >-
+    To add to these items, edit the file at
+    <code>_patterns/00-base/02-breakpoints/_variables.scss</code>

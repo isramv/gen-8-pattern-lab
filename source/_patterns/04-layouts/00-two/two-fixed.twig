@@ -1,0 +1,8 @@
+{% set heading %}<h2>{{ heading }}</h2>{% endset %}
+
+{% include 'layout.twig' with {
+  'layout': '2_fixed',
+  'heading': heading,
+  'items_count': items|length,
+  'items': items
+} %}

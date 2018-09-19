@@ -1,0 +1,20 @@
+html {
+  @include font-size($base-font-size);
+}
+
+html, body {
+  @include font('avenir', 'medium');
+  line-height: $base-line-height;
+}
+
+b, strong {
+  @include font('avenir', 'bold');
+}
+
+i, em {
+  @include font('avenir', 'mediumItalic');
+}
+
+p {
+  margin: 0 0 $spacer;
+}
